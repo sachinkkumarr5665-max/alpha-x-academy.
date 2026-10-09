@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | ALPHA X ACADEMY</title><meta name="robots" content="noindex">
+<link rel="stylesheet" href="/static/css/style.css"><script src="/static/js/admin.js" defer></script></head>
+<body data-page="dash" class="adminbg">
+<header class="nav"><div class="wrap row"><span class="brand">ALPHA <b>X</b> · Admin</span>
+  <span><span id="who"></span> <button id="logout" class="btn ghost small">Log out</button></span></div></header>
+<main class="wrap dash"><p id="msg" role="status"></p>
+<section><h2>Overview</h2><div id="stats" class="cards"></div>
+  <p class="note">Page views count each load of the home page. Unique visitors are approximate: they count distinct anonymous browser cookies, so cleared cookies, other devices or private browsing change the number, and it is not a count of real people.</p>
+  <h3>Page views by date (last 14 days)</h3><div class="scroll"><table id="views"></table></div></section>
+<section><h2>Enquiries</h2>
+  <div class="row"><input id="q" placeholder="Search name, phone, class" aria-label="Search enquiries">
+  <select id="fstatus" aria-label="Filter by status"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Admitted</option><option>Closed</option></select></div>
+  <div class="scroll"><table id="enq"></table></div></section>
+<section><h2>Courses</h2>
+  <form id="course-form" class="form card"><input type="hidden" name="id">
+    <label>Title<input name="title" required maxlength="120"></label>
+    <label>Category<select name="category"><option value="school">School tuition</option><option value="competitive">Competitive exam</option></select></label>
+    <label>Class or exam<input name="class_or_exam" required maxlength="60" placeholder="e.g. Class 9 or Railway Clerk"></label>
+    <label>Description<textarea name="description" rows="2" maxlength="500"></textarea></label>
+    <div class="row"><button class="btn" type="submit">Save course</button><button class="btn ghost" type="reset" id="course-reset">Clear</button></div></form>
+  <div class="scroll"><table id="courses"></table></div></section>
+<section><h2>Website content</h2><form id="content-form" class="form card"></form></section>
+</main></body></html>
